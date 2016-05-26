@@ -1,0 +1,25 @@
+#
+#  APPLICATION
+#
+
+Bundle-Version: 1.0.0.${tstamp}
+Bundle-Description: Demo IoT Bundle
+
+Private-Package:  \
+	my.iot.application
+
+EnRoute-Application: 	my.iot
+JPM-Command:			iot
+
+-includeresource: \
+	{readme.md}, \
+	{configuration=configuration}, \
+	{static=static}, \
+	web=web
+
+-buildpath: \
+	osgi.enroute.base.api,\
+	my.iot.api;version=latest
+	
+-testpath: \
+	osgi.enroute.junit.wrapper;version=4.12
